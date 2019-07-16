@@ -3,6 +3,15 @@ body {
         padding: 1em;
         background-color: white;
       }
+	  main{
+		  width: 100%
+	  }
+	  .centre-div {
+		  margin:  0 auto;
+		  max-width: 600px;
+		  border: 1px solid #5d6874;
+		  border-radius: 50px;
+	  }
       
       [data-cart-info],
       [data-credit-card] {

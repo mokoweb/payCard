@@ -4,17 +4,16 @@
       
       const ccDigitDiv = document.querySelector('div[data-cc-digits]')
       
-      const formatAsMoney=(amount, buyerCountry)=>{
+     const formatAsMoney=(amount, buyerCountry)=>{ 
         let curr = countries.find((count)=>{
           return count.country == buyerCountry;
         })
-        
+         
         if(!curr){
-          curr = "USD"
-        }else{
-          curr = curr.currency
-        }
-        return amount.toLocaleString('en-US',{style: 'currency', currency:curr})
+          curr.currency = "USD"
+          curr.code = "US"
+        }  
+        return amount.toLocaleString(`en-${curr.code}`,{style: 'currency', currency:curr.currency})
       } 
       
 	  const validateWithLuhn = (digits) => {
