@@ -3,16 +3,19 @@ body {
         padding: 1em;
         background-color: white;
       }
-	  main{
-		  width: 100%
-	  }
-	  .centre-div {
-		  margin:  0 auto;
-		  max-width: 600px;
-		  border: 1px solid #5d6874;
+	   
+	  main {
+		  margin:  auto;
+		  max-width: 400px;
+		  border: 3px solid #5d6874;
 		  border-radius: 50px;
 	  }
       
+	  .centre-div {
+		   margin:  0 auto;
+		   padding: 2.2em;
+	  }
+	  
       [data-cart-info],
       [data-credit-card] {
         transform: scale(0.78);
@@ -108,8 +111,6 @@ body {
       }
                  
       button[data-pay-btn] {
-        position: fixed;
-        bottom: 20px;
         width: 90%;
         border:1px solid; 
       }
