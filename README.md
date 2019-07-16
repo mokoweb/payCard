@@ -68,7 +68,7 @@ Each name must not be less than 3 chars
 
 * [HTML5](https://maven.apache.org/) - Markup
 * [CSS] - for styling
-*[Javascript(Es6)]  - scripting
+* [Javascript(Es6)]  - scripting
 
  
 
