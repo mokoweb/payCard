@@ -12,7 +12,14 @@
           return false
       }
       
-	  
+	     const flagIfInvalid = (field, isValid)=>{
+        if(isValid && field.hasAttribute('class'))
+          field.classList.remove('is-invalid')
+        else
+          field.setAttribute('class', 'is-invalid')      
+      }
+      
+    
 	      const detectCardType =({target})=>{
         //target is the first of the input field
         const firstNumber = target.value.charAt(0)
