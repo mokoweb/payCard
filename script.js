@@ -5,6 +5,31 @@
       };
 	  
 	  
+	  
+	      const detectCardType =({target})=>{
+        //target is the first of the input field
+        const firstNumber = target.value.charAt(0)
+        const dataCreditDiv = document.querySelector('div[data-credit-card]');
+        let stringValue = ""
+        
+        const dataTypeImg = document.querySelector('img[data-card-type]');
+        
+        if(firstNumber == 4){
+          //i.e visa
+		  dataCreditDiv.classList.remove('is-mastercard');
+          dataCreditDiv.classList.add('is-visa');
+          stringValue ="is-visa"
+          dataTypeImg.src= supportedCards.visa
+          return stringValue;
+          
+        }else if(firstNumber == 5){
+		dataCreditDiv.classList.remove('is-visa');
+          stringValue = "is-mastercard"
+          dataTypeImg.src = supportedCards.mastercard
+          dataCreditDiv.classList.add('is-mastercard');
+          return stringValue;
+        }
+      } 
 	   const validateCardHolderName =({target})=>{
         //target is the card holders name
         const namesArray = target.value.split(' ');
