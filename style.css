@@ -115,3 +115,23 @@ body {
         border:1px solid; 
 		padding: 10px 0;
       }
+	  
+	  #snackbar {
+    visibility: hidden;
+    min-width: 230px;
+    background-color: #d90003;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    font-size: 17px;
+}
+/* snack back css */
+#snackbar.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}

@@ -149,6 +149,7 @@
             }
           
         }else{
+			mySnackBar('Name needs to follow the format Surname Name');
            flagIfInvalid(target, false)
           return false
          }  
@@ -261,3 +262,11 @@
       };
 
       startApp();
+	  
+	  //show snackbar notification function
+	 const mySnackBar= (message)=> {
+    let x = document.getElementById("snackbar");
+    x.className = "show";
+	x.innerHTML = message;
+    setTimeout(()=>{ x.className = x.className.replace("show", ""); }, 3000);
+}
