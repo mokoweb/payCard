@@ -62,10 +62,14 @@ Name input must be in the format -> Surname Name
 Each name must not be less than 3 chars
 ```
 
+Format money to local currency
+```
+
+```
  
 ## Built With
 
-
+* [RandomAPI](https://randomapi.com/api/006b08a801d82d0c9824dcfdfdfa3b3c) - for fecthing the price, quantity and country
 * [HTML5](https://maven.apache.org/) - Markup
 * [CSS] - for styling
 * [Javascript(Es6)]  - scripting
