@@ -111,6 +111,7 @@ body {
       }
                  
       button[data-pay-btn] {
-        width: 90%;
+        width: 100%;
         border:1px solid; 
+		padding: 10px 0;
       }
