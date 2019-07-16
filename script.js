@@ -1,4 +1,13 @@
-
+   const fetchBill =() =>{
+        const api ="https://randomapi.com/api/006b08a801d82d0c9824dcfdfdfa3b3c"
+        fetch(api)
+        
+          .then(response=> response.json())
+        
+          .then((data)=>{ displayCartTotal(data)})
+          .catch(err=> console.log(err));
+        }
+           
       const countries = [
         {
           code: "US",
@@ -48,7 +57,7 @@
       ];
       
       const startApp = () => {
-        //fetchBill()
+        fetchBill()
       };
 
       startApp();
