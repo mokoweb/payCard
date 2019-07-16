@@ -5,6 +5,29 @@
       };
 	  
 	  
+	   const validateCardHolderName =({target})=>{
+        //target is the card holders name
+        const namesArray = target.value.split(' ');
+        if(namesArray.length == 2){
+          //count the chars in the names
+            const nameLen = namesArray[0].length
+            const surNameLen = namesArray[1].length
+
+            if(nameLen >=3 && surNameLen >= 3){
+              flagIfInvalid(target, true)
+             return true
+              
+            }else{
+              flagIfInvalid(target, false)
+              return false
+            }
+          
+        }else{
+           flagIfInvalid(target, false)
+          return false
+         }  
+      }
+	  
 	    const uiCanInteract = ()=>{
         
       const ccDigit =  ccDigitDiv.firstElementChild;
