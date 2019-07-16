@@ -17,6 +17,55 @@
         return amount.toLocaleString('en-US',{style: 'currency', currency:curr})
       } 
       
+	  const validateWithLuhn = (digits) => {
+        let sum = 0;
+        const digitsAreValid = digits.every((item) => {
+          return !isNaN(Number.parseInt(item));
+        });
+        if (digitsAreValid && digits.length === 16) {
+          const reversed = digits.reverse();
+        reversed.forEach((item, index) => {
+          if (index % 2 > 0) {
+            const doubled = Number.parseInt(item) * 2;
+            if (doubled > 9) {
+              sum += (doubled - 9);
+            } else {
+              sum += doubled;
+            }
+          } else {
+            sum += Number.parseInt(item);
+          }
+        });
+        // console.log(sum);
+        return (sum % 10) === 0;
+        } else {
+          return false;
+        }
+      };
+	  
+	     const validateCardNumber =() =>{
+       const getDigits = ccDigitDiv.querySelectorAll('input')
+      // let digArr = []
+       let digits = ""
+       let isValid = false;
+        
+		
+       getDigits.forEach((digit)=>{
+         digits += digit.value
+       });
+        
+        //check for 16 digits
+        const regexExp = /^\d+$/
+        if(digits.length == 16 && regexExp.test(digits)){       	
+          //split digits
+          digits = digits.split("").map(item => parseInt(item));
+
+        isValid = validateWithLuhn(digits)
+      }
+        //adding or removing is-invalid class
+         return flagIfInvalid(ccDigitDiv, isValid) 
+      }
+	  
       const validateCardExpiryDate = ({target})=>{
         
         const slash = expiryDateFormatIsValid(target)
