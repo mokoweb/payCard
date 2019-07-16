@@ -114,6 +114,7 @@ body {
         width: 100%;
         border:1px solid; 
 		padding: 10px 0;
+		border-radius: 10px;
       }
 	  
 	  #snackbar {
