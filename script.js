@@ -18,10 +18,7 @@
       
 	  const validateWithLuhn = (digits) => {
         let sum = 0;
-        const digitsAreValid = digits.every((item) => {
-          return !isNaN(Number.parseInt(item));
-        });
-        if (digitsAreValid && digits.length === 16) {
+         
           const reversed = digits.reverse();
         reversed.forEach((item, index) => {
           if (index % 2 > 0) {
@@ -37,12 +34,10 @@
         });
         // console.log(sum);
         return (sum % 10) === 0;
-        } else {
-          return false;
-        }
+        
       };
 	  
-	     const validateCardNumber =() =>{
+	const validateCardNumber =() =>{
        const getDigits = ccDigitDiv.querySelectorAll('input')
       // let digArr = []
        let digits = ""
